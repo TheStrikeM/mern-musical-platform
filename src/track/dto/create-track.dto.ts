@@ -1,5 +1,5 @@
 export class CreateTrackDto {
-    readonly name;
-    readonly artict;
-    readonly text;
+    readonly name: string
+    readonly artict: string
+    readonly text: string
 }

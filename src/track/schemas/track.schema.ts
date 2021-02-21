@@ -20,7 +20,7 @@ export class Track {
     @Prop()
     audio: string;
 
-    @Prop({type: mongo.Schema.Types.ObjectId, ref: 'Comment'})
+    @Prop({type: [{type: mongo.Schema.Types.ObjectId, ref: 'Comment'}]})
     comments: Comment[];
 }
 
