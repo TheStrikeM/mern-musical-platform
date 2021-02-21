@@ -28,7 +28,10 @@ export class TrackController {
     }
 
     @Delete(':id')
-    delete() {}
+    delete(@Param('id') id: ObjectId) {
+        // Delete track
+        return this.trackService.delete(id)
+    }
 
 
 }
