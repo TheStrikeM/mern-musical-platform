@@ -15,12 +15,13 @@ export class TrackService {
     ) {}
 
     async create(dto: CreateTrackDto): Promise<Track> {
-        const track = this.trackModel.create({...dto, listens: 0})
+        const track = await this.trackModel.create({...dto, listens: 0})
         return track
     }
 
-    async getAll() {
-
+    async getAll(): Promise<Track[]> {
+        const tracks = await this.trackModel.find()
+        return tracks
     }
 
     async getOne() {

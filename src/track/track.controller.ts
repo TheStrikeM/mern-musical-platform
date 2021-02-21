@@ -16,7 +16,8 @@ export class TrackController {
 
     @Get()
     getAll() {
-        return 'Привет!'
+        // Get all tracks
+        return this.trackService.getAll()
     }
 
     getOne() {
